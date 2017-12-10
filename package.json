@@ -1,0 +1,27 @@
+{
+  "name": "react-template",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/jiingwang/react-template.git",
+  "author": "jonneswong@gmail.com",
+  "license": "MIT",
+  "scripts": {
+    "test": "",
+    "dev": "",
+    "build": ""
+  },
+  "dependencies": {
+    "axios": "^0.17.1",
+    "react": "^16.2.0",
+    "react-redux": "^5.0.6",
+    "react-router": "^4.2.0",
+    "redux": "^3.7.2"
+  },
+  "devDependencies": {
+    "eslint": "^4.13.0",
+    "karma": "^1.7.1",
+    "mocha": "^4.0.1",
+    "postcss": "^6.0.14",
+    "webpack": "^3.10.0"
+  }
+}
