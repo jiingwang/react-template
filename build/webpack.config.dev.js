@@ -9,7 +9,7 @@ const config = Object.assign({}, baseConfig, {
 		contentBase: path.resolve(__dirname, "../dist/"),
 		compress: true,
 		hot: true,
-		port: con
+		port: config.port
 	},
 	plugins: {
 		new HtmlWebpackPlugin({
