@@ -1,5 +1,5 @@
-const devConfig = require('./wepback.config.dev.js');
-const prodConfig = require('./wepback.config.prod.js');
+const devConfig = require('./webpack.config.dev.js');
+const prodConfig = require('./webpack.config.prod.js');
 
 module.exports = {
 	devConfig,

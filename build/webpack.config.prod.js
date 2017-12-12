@@ -5,8 +5,8 @@ const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const baseConfig = require("./webpack.config.base.js");
 const config = require("./config");
 
-const config = Object.assign({}, baseConfig, {
-	plugins: {
+const pordConfig = Object.assign({}, baseConfig, {
+	plugins: [
 		new UglifyJsPlugin({
 			cache: true,
 			parallel: true,
@@ -21,8 +21,8 @@ const config = Object.assign({}, baseConfig, {
 			name: "vendor",
 			minChunks: Infinity
 		})
-	}
+	]
 });
 
 
-module.exports = config;
+module.exports = pordConfig;
