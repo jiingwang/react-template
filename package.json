@@ -7,12 +7,13 @@
   "license": "MIT",
   "scripts": {
     "test": "",
-    "dev": "webpack-dev-server --env.NODE_ENV='dev' --progress --color --watch",
-    "build": "webpack --env.NODE_ENV='prod' "
+    "dev": "webpack-dev-server --env.NODE_ENV=dev --progress --color --watch",
+    "build": "rm -rf dist/* && webpack --env.NODE_ENV=prod --progress --color"
   },
   "dependencies": {
     "axios": "^0.17.1",
     "react": "^16.2.0",
+    "react-dom": "^16.2.0",
     "react-redux": "^5.0.6",
     "react-router": "^4.2.0",
     "redux": "^3.7.2"
@@ -20,6 +21,8 @@
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.7",
     "eslint": "^4.13.0",
     "file-loader": "^1.1.5",

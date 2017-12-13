@@ -5,7 +5,7 @@ const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const baseConfig = require("./webpack.config.base.js");
 const config = require("./config");
 
-const pordConfig = Object.assign({}, baseConfig, {
+const prodConfig = Object.assign({}, baseConfig, {
 	plugins: [
 		new UglifyJsPlugin({
 			cache: true,
@@ -14,8 +14,8 @@ const pordConfig = Object.assign({}, baseConfig, {
 		new HtmlWebpackPlugin({
 			title: config.tilte,
 			inject: true,
-			filename: "../dist/index.html",
-			template: "../index.html"
+			filename: "../index.html",
+			template: "index.html"
 		}),
 		new webpack.optimize.CommonsChunkPlugin({
 			name: "vendor",
@@ -25,4 +25,4 @@ const pordConfig = Object.assign({}, baseConfig, {
 });
 
 
-module.exports = pordConfig;
+module.exports = prodConfig;

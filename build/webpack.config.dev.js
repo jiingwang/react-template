@@ -5,17 +5,19 @@ const baseConfig = require("./webpack.config.base.js");
 const config = require("./config");
 
 const devConfig = Object.assign({}, baseConfig, {
+	output: {
+		filename: '[name].js',
+		path: path.resolve(__dirname, '../dist/'),
+		publicPath: '/dist/'
+	},
 	devServer: {
-		contentBase: path.resolve(__dirname, "../dist/"),
 		compress: true,
 		hot: true,
-		port: config.port
+		port: config.port,
+		inline: true,
+		open: true
 	},
 	plugins: [
-		new HtmlWebpackPlugin({
-			title: config.tilte,
-			inject: true
-		}),
 		new webpack.HotModuleReplacementPlugin()
 	]
 });

@@ -3,12 +3,12 @@ var path = require('path');
 module.exports  = {
 	entry: {
 		vendor: ['react', 'react-router', 'react-redux'],
-		app: '../src/index.js'
+		app: './src/index.js'
 	},
 	output: {
-		filename: '[name].[hash].js',
-		path: path.resolve(__dirname, '../dist/'),
-		publicpath: '/assets/'
+		filename: '[name].[hash:8].js',
+		path: path.resolve(__dirname, '../dist/assets/'),
+		publicPath: './assets/'
 	},
 	module: {
 		rules: [
@@ -62,6 +62,5 @@ module.exports  = {
 		alias: {
 
 		}
-	},
-	pulugins: []
+	}
 }
