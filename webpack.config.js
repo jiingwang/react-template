@@ -3,7 +3,6 @@ const webpackConfig = require('./build');
 
 module.exports = env => {
 	let config = {};
-	console.log(env);
 	if (env.NODE_ENV === 'dev') {
 		console.log('dev env');
 		config = webpackConfig.devConfig;

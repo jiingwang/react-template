@@ -6,7 +6,7 @@ module.exports  = {
 		app: './src/index.js'
 	},
 	output: {
-		filename: '[name].[hash:8].js',
+		filename: '[name].[chunkhash].js',
 		path: path.resolve(__dirname, '../dist/assets/'),
 		publicPath: './assets/'
 	},
@@ -59,8 +59,6 @@ module.exports  = {
 	devtool: 'source-map',
 	resolve: {
 		extensions: ['.js', '.jsx', '.json'],
-		alias: {
-
-		}
+		alias: {}
 	}
 }
