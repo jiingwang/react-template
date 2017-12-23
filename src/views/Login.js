@@ -1,8 +1,9 @@
 import React from 'react';
+import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom'
 import PropTypes from 'prop-types';
-import { clickPeople } from '../actions';
+import loginActions from '../redux/login/actions';
 
 class Login extends React.Component {
 	constructor(props) {
@@ -46,13 +47,8 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = dispatch => {
-	return {
-		onPeopleClick: id => {
-			dispatch(clickPeople(id));
-		}
-	}
+	return {actions: bindActionCreators(loginActions, dispatch)};
 };
-
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Login));
 
