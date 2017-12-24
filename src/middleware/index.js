@@ -1,10 +1,5 @@
-import thunkMiddleware from 'redux-thunk';
-
-import apiMiddleware from './apiMiddleware';
-
-export const apiMiddleware = apiMiddleware;
-export const thunkMiddleware = thunkMiddleware;
-
+export thunkMiddleware from 'redux-thunk';
+export apiMiddleware from 'redux-api-middleware';
 
 export default {
     apiMiddleware,
