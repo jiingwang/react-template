@@ -1,13 +1,14 @@
 import React from 'react';
-import Login from './views/Login';
+import Todos from './views/todos/index';
+
+// 加载所有样式文件
+import "../static/style/index.less";
+import "../static/style/todos.less";
 
 const App = (props) => {
 	return (
 		<div>
-			<p>hello world!</p>
-			<p>what your name 1 2 ?</p>
-			{ JSON.stringify(props.history.location) }
-			<Login />
+			<Todos></Todos>
 		</div>
 	)
 };

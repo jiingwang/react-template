@@ -3,7 +3,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom'
 import PropTypes from 'prop-types';
-import loginActions from '../redux/login/actions';
+import loginActions from '../redux/example/actions';
 
 class Login extends React.Component {
 	constructor(props) {
