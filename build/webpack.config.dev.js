@@ -5,6 +5,9 @@ const baseConfig = require("./webpack.config.base.js");
 const config = require("./config");
 
 const devConfig = Object.assign({}, baseConfig, {
+    entry: {
+        app: './src/index.js'
+    },
 	output: {
 		filename: '[name].js',
 		path: path.resolve(__dirname, '../dist/'),
@@ -18,7 +21,7 @@ const devConfig = Object.assign({}, baseConfig, {
 		open: true
 	},
 	plugins: [
-		new webpack.HotModuleReplacementPlugin()
+		new webpack.HotModuleReplacementPlugin(),
 	]
 });
 

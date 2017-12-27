@@ -8,7 +8,8 @@
   "scripts": {
     "test": "",
     "dev": "webpack-dev-server --env.NODE_ENV=dev --progress --color --watch",
-    "build": "rm -rf dist/* && webpack --env.NODE_ENV=prod --progress --color"
+    "build": "rm -rf dist/!(lib) && webpack --env.NODE_ENV=prod --progress --color",
+    "dll": "webpack --env.NODE_ENV=dll --progress --color"
   },
   "dependencies": {
     "amfe-flexible": "^2.2.1",
@@ -23,6 +24,7 @@
     "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
+    "add-asset-html-webpack-plugin": "^2.1.2",
     "autoprefixer": "^7.2.3",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",

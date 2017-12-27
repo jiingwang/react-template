@@ -4,7 +4,6 @@ var pxtorem = require('postcss-pxtorem');
 
 module.exports  = {
 	entry: {
-		vendor: ['react', 'react-router', 'react-redux'],
 		app: './src/index.js'
 	},
 	output: {
@@ -71,4 +70,4 @@ module.exports  = {
 		extensions: ['.js', '.jsx', '.json'],
 		alias: {}
 	}
-}
+};
