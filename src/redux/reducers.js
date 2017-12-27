@@ -4,6 +4,5 @@ import login from './example/reducers';
 import todos from './todos/reducers';
 
 export default combineReducers({
-    login,
     todos
 });

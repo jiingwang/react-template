@@ -17,7 +17,7 @@ export default handleActions({
     },
     [actionTypes.FINISH_TODO](state, action) {
         const filteredList = state.todoList.map(todo => {
-             return todo.id === action.payload.id ? Object.assign({}, todo, {isDeleted: true}) : todo;
+             return todo.id === action.payload.id ? Object.assign({}, todo, {isFinished: true}) : todo;
         });
         return {todoList: filteredList};
     }

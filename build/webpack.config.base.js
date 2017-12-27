@@ -1,4 +1,6 @@
 var path = require('path');
+var autoprefixer = require('autoprefixer');
+var pxtorem = require('postcss-pxtorem');
 
 module.exports  = {
 	entry: {
@@ -27,7 +29,16 @@ module.exports  = {
 						loader: 'css-loader'
 					},
 					{
-						loader: 'postcss-loader'
+						loader: 'postcss-loader',
+						options: {
+							plugins: [
+                                autoprefixer(),
+                                pxtorem({
+                                    rootValue: 37.5,
+                                    propList: ['*'],
+								})
+							]
+						}
 					},
 					{
 						loader: 'less-loader'

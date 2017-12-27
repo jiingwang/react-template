@@ -7,11 +7,10 @@ class TodoList extends React.Component {
 
     render() {
         const { todos, onDeleteTodo, onToggleTodo } = this.props;
-        console.log(this.props);
         const dones = todos.filter(todo => todo.isFinished);
         const undones = todos.filter(todo => !todo.isFinished);
         return (
-            <div>
+            <div className="todo-list">
                 <h3>未完成</h3>
                 <ul>
                     {
@@ -44,10 +43,6 @@ class TodoList extends React.Component {
                                 <li
                                     key={ todo.id }
                                 >
-                                    <input
-                                        type="checkbox"
-                                        onChange={ e => onToggleTodo(todo.id) }
-                                    />
                                     <span>{ todo.content }</span>
                                     <a
                                         href="#"

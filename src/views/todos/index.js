@@ -20,6 +20,7 @@ class Todos extends React.Component {
     }
 
     handleIntputChange(e) {
+        console.log()
         this.setState({
             todo: e.target.value
         });
@@ -40,6 +41,7 @@ class Todos extends React.Component {
 
     handleDeleteTodo(id) {
         const { actions } = this.props;
+        console.log(id);
         actions.delete_todo({id});
     }
 

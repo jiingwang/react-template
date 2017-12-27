@@ -8,7 +8,7 @@ class TodoForm extends React.Component {
     render() {
         const { todo, onInputChange, onAddTodo } = this.props;
         return (
-            <div>
+            <div className="form">
                 <input
                     type="text"
                     value={ todo }
@@ -17,7 +17,7 @@ class TodoForm extends React.Component {
                 <span
                     onClick={ onAddTodo }
                 >
-                    +
+                    新增
                 </span>
             </div>
         );

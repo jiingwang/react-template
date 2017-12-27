@@ -37,7 +37,7 @@ export const add_todo = (param) => {
 /**
  *  删除todo
  */
-const deleteTodo = createAction(ADD_TODO);
+const deleteTodo = createAction(DELETE_TODO);
 export const delete_todo = (param) => {
     return dispatch => {
         dispatch(deleteTodo(param));
@@ -47,7 +47,7 @@ export const delete_todo = (param) => {
 /**
  *  完成todo
  */
-const finishTodo = createAction(ADD_TODO);
+const finishTodo = createAction(FINISH_TODO);
 export const finish_todo = (param) => {
     return dispatch => {
         dispatch(finishTodo(param));
